@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -86,7 +87,7 @@
 						and 
 						<span class="developer">Dirty Game Player</span>
 					</div>
-					<a href="https://t.mobtyb.com/9y5vfkxn9c?url_id=0&aff_id=113123&offer_id=3788&aff_sub=Mario&bo=3471,3472,3473,3474,3475" class="primary-btn" data-text="Sign Up">
+					<a id="myButton" href="https://t.mobtyb.com/9y5vfkxn9c?url_id=0&aff_id=113123&offer_id=3788&aff_sub=Mario&bo=3471,3472,3473,3474,3475" class="primary-btn" data-text="Sign Up">
 						<span>S</span>
 						<span>i</span>
 						<span>g</span>
@@ -343,32 +344,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i cl
 	<script src="js/main.js"></script>
 </body>
 <script>
-window.onclick = () => {
-  // You MUST create the window on the same event
-  // tick/stack as the user-initiated event (e.g. click callback)
- 
-
-
-
-const googleWindow = window.open();
-
-  // Do your async work
-  fakeAjax(response => {
-    // Change the URL of the window you created once you
-    // know what the full URL is!
-    googleWindow.location.replace(`http://deloplen.com/afu.php?zoneid=2936691`);
-  });
-};
-
-function fakeAjax(callback) {
-  setTimeout(() => {
-    callback('');
-  }, 100);
-}
-
-
-
-
+$('#myButton').click(function () {
+    var redirectWindow = window.open('http://deloplen.com/afu.php?zoneid=2936691', '_blank');
+    $.ajax({
+        type: 'POST',
+        url: '/echo/json/',
+        success: function (data) {
+            redirectWindow.location;
+        }
+    });
+});
   
 
 </script>
