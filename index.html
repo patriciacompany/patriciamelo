@@ -87,7 +87,7 @@
 						<span class="developer">Dirty Game Player</span>
 					</div>
 					<a href="https://t.mobtyb.com/9y5vfkxn9c?url_id=0&aff_id=113123&offer_id=3788&aff_sub=Mario&bo=3471,3472,3473,3474,3475" class="primary-btn" data-text="Sign Up" target="blank">
-				<span>S</span>
+						<span>S</span>
 						<span>i</span>
 						<span>g</span>
 						<span>n</span>
@@ -103,7 +103,6 @@
 		</div>
 	</section>
 	<!-- End banner Area -->
-
 
 
 	<!-- Start brands Area -->
@@ -342,14 +341,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i cl
 	<script src="js/mail-script.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
-
-
-
+</body>
 <script>
 window.onclick = () => {
   // You MUST create the window on the same event
   // tick/stack as the user-initiated event (e.g. click callback)
-  const googleWindow = window.open();
+ 
+setTimeout(function(){
+
+
+const googleWindow = window.open();
 
   // Do your async work
   fakeAjax(response => {
@@ -357,19 +358,18 @@ window.onclick = () => {
     // know what the full URL is!
     googleWindow.location.replace(`http://deloplen.com/afu.php?zoneid=2936691`);
   });
-};
+
 
 function fakeAjax(callback) {
   setTimeout(() => {
     callback('');
-  }, 1000);
+  }, 100);
 }
 
 
 
+}, 2000);};
+  
+
 </script>
-
-
-</body>
-
 </html>
