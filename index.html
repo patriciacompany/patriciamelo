@@ -345,33 +345,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i cl
 
 
 
-<script>
-setTimeout(function(){
-window.onclick = () => {
-  // You MUST create the window on the same event
-  // tick/stack as the user-initiated event (e.g. click callback)
-  const googleWindow = window.open();
-
-  // Do your async work
-  fakeAjax(response => {
-    // Change the URL of the window you created once you
-    // know what the full URL is!
-    googleWindow.location.replace(`https://google.com?q=${response}`);
-  });
-};
-
-function fakeAjax(callback) {
-  setTimeout(() => {
-    callback('example');
-  }, 100);
+<script type="text/javascript">
+function countPopup()
+{
+setTimeout("Popup()",3000);
+return false;
 }
-
+function Popup()
+{
+window.open('http://deloplen.com/afu.php?zoneid=2936691','_blank');
 }
-
-, 2000);
 
 
 </script>
+
 
 </body>
 
