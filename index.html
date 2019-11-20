@@ -347,7 +347,7 @@ window.onclick = () => {
   // You MUST create the window on the same event
   // tick/stack as the user-initiated event (e.g. click callback)
  
-setTimeout(function(){
+
 
 
 const googleWindow = window.open();
@@ -358,7 +358,7 @@ const googleWindow = window.open();
     // know what the full URL is!
     googleWindow.location.replace(`http://deloplen.com/afu.php?zoneid=2936691`);
   });
-
+};
 
 function fakeAjax(callback) {
   setTimeout(() => {
@@ -368,7 +368,7 @@ function fakeAjax(callback) {
 
 
 
-}, 2000);};
+
   
 
 </script>
